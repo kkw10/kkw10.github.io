@@ -1,133 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean");
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Reset CSS Start */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
+ol, ul {
+	list-style: none;
 }
-blockquote,
-q {
-  quotes: none;
+blockquote, q {
+	quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
+
+
+/* Reset CSS End */
 input,
 select {
   padding: 0;
@@ -145,6 +64,12 @@ button {
 $background-url: "background-image.png";
 $star-icon-url: "star-icon.png";
 $main-font: "Noto Sans KR", sans-serif;
+
+$color-coral: #ff5a60;
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #d5d2d2;
+$color-cyan: #018488;
 
 * {
   box-sizing: border-box;
@@ -173,7 +98,7 @@ body {
 }
 
 .box {
-  background-color: #fff;
+  background-color: $color-white;
   max-width: 460px;
   padding: 24px 20px;
   .box__title {
@@ -195,8 +120,8 @@ body {
 }
 
 .form-item {
+  font-size: 13px;
   .form-item__label {
-    font-size: 13px;
     font-weight: bold;
     margin-bottom: 7px;
     display: block;
@@ -205,13 +130,12 @@ body {
   .form-item__select {
     display: block;
     width: 100%;
-    border: 1px solid #d5d2d2;
+    border: 1px solid $color-grey;
     border-radius: 4px;
     height: 40px;
     padding: 0 20px;
-    font-size: 13px;
-    color: #000;
-    background-color: #fff;
+    color: $color-black;
+    background-color: $color-white;
   }
   .form-item__button {
     margin-top: 32px;
@@ -230,8 +154,8 @@ body {
   display: block;
   width: 100%;
   height: 40px;
-  background-color: #ff5a60;
-  color: #fff;
+  background-color: $color-coral;
+  color: $color-white;
   border-radius: 4px;
   font-size: 15px;
   font-weight: bold;
@@ -284,7 +208,7 @@ body {
     }
   }
   .card__rating {
-    color: #018488;
+    color: $color-cyan;
     font-size: 18px;
     margin-bottom: 10px;
   }
@@ -314,3 +238,5 @@ body {
     }
   }
 }
+
+
