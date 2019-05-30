@@ -63,6 +63,7 @@ button {
 /* CSS Start */
 $background-url: "background-image.png";
 $star-icon-url: "star-icon.png";
+$select-icon-url: "angle-arrow-down.png";
 $main-font: "Noto Sans KR", sans-serif;
 
 $color-coral: #ff5a60;
@@ -126,6 +127,7 @@ body {
     margin-bottom: 7px;
     display: block;
   }
+
   .form-item__input,
   .form-item__select {
     display: block;
@@ -137,6 +139,13 @@ body {
     color: $color-black;
     background-color: $color-white;
   }
+
+  .form-item__select {
+    background: url($select-icon-url) no-repeat;
+    background-size: 16px 16px;
+    background-position: right 20px top 50%;
+  }
+
   .form-item__button {
     margin-top: 32px;
   }

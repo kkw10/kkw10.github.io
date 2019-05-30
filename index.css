@@ -145,6 +145,12 @@ body {
   background-color: #fff;
 }
 
+.form-item .form-item__select {
+  background: url("angle-arrow-down.png") no-repeat;
+  background-size: 16px 16px;
+  background-position: right 20px top 50%;
+}
+
 .form-item .form-item__button {
   margin-top: 32px;
 }
