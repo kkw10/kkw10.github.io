@@ -8,7 +8,7 @@ class Pagination {
   }
 
   init() {
-    let navoption = true;
+    const navoption = true;
     this.carousel.setAttrToElement(this.navItems, "data-nav-index", navoption);
     this.attachEventToPagination();
     this.navItems[0].classList.add("scale");

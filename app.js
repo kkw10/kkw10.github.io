@@ -5,8 +5,8 @@ import Pagination from "./pagination.js";
 
 const carousel = new Carousel(".carousel", {
   infinite: true
-});
+}, pagination);
 
 const pagination = new Pagination(carousel);
-carousel.init(pagination);
+carousel.init();
 pagination.init();
