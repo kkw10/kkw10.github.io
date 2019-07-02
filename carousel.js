@@ -38,8 +38,8 @@ class Carousel {
   }
 
   setCarouselItem() {
-    let originFirstItem = items[0];
-    let originLastItem = items[this.itemsInitCount - 1];
+    let originFirstItem = this.items[0];
+    let originLastItem = this.items[this.itemsInitCount - 1];
     this.appendCloneItem(
       this.carousel,
       originFirstItem,
