@@ -15,7 +15,7 @@ class MainController {
 
     init() {
         console.log("mainController initiating...")
-        let data = new Request('http://127.0.0.1:5500/Javascript/models/localData.json')
+        let data = new Request('https://kkw10.github.io//Javascript/models/localData.json')
         
         fetch(data)
             .then((response) => {
