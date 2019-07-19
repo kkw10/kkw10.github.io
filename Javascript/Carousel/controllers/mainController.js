@@ -7,15 +7,8 @@ class MainController {
         this.eventSetting();
     }
 
-    eventSetting() {
-        this.arrows.arrowsEvent = this.mainEvent.bind(this);
-        this.cardNavi.mainEvent = this.mainEvent.bind(this);
-        this.cardNavi.setItemAttribute = this.carousel.setItemAttribute.bind(this);
-    }
-
     init() {
-        console.log("mainController initiating...")
-        let data = new Request('https://kkw10.github.io/Javascript/models/localData.json')
+        let data = new Request('https://kkw10.github.io//Javascript/Carousel/models/localData.json')
         
         fetch(data)
             .then((response) => {
@@ -26,6 +19,12 @@ class MainController {
                 this.carousel.init();
                 this.checkingOption(data);
             })
+    }
+
+    eventSetting() {
+        this.arrows.arrowsEvent = this.mainEvent.bind(this);
+        this.cardNavi.mainEvent = this.mainEvent.bind(this);
+        this.cardNavi.setItemAttribute = this.carousel.setItemAttribute.bind(this);
     }
 
     checkingOption(data) {
@@ -39,6 +38,8 @@ class MainController {
             this.cardNavi.render(data);
             this.cardNavi.init();
         }  
+
+        
     }
 
     mainEvent(event) {
