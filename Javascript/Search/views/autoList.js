@@ -16,26 +16,17 @@ class AutoList extends SearchList {
         this.currentInput = data;
         this.list.style.display = 'block';
 
-        let node;
-        data.forEach((v) => {
-            if(v.includes(target)) {
-                node = `<li>${v}</li>`;
-                node = node.replace(target, `<strong>${target}</strong>`);
-            } else {
-                node = ''
-            }
+        let node = data
+            .filter(v => v.includes(target))
+            .reduce((acc, cur)  => {
+                cur = `<li>${cur}</li>`;
+                cur = cur.replace(target, `<strong>${target}</strong>`);
+                acc += cur;
+                return acc;
+            }, '')
 
-            this.list.innerHTML += node;
-        })
-
-        
+        this.list.innerHTML = node;        
     }
-
-    hide() {
-        this.list.innerHTML = '';
-        this.list.style.display = 'none';
-    }
-
 }
 
 export default AutoList;

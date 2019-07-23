@@ -17,7 +17,6 @@ class SearchList {
 
         this.list.children[this.currentPointer].classList.add('focus');
         this.status = true;
-
         return this.list.children[this.currentPointer].innerText;
     }
 
@@ -45,6 +44,12 @@ class SearchList {
         } else {
             this.currentPointer = 0;
         }   
+    }
+
+    hide() {
+        this.list.innerHTML = '';
+        this.list.style.display = 'none';
+        this.status = false;
     }
 
 }

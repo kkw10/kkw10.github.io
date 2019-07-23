@@ -5,7 +5,8 @@ class Arrows {
         this.arrowsEvent = null;
     }
 
-    init() {
+    init(target) {
+        this.render(target);
         this.prevBtn = qS(".btn-prev");
         this.nextBtn = qS(".btn-next");
         this.bindEvents()
@@ -22,25 +23,24 @@ class Arrows {
     }
 
     getArrowsHTML() {
-        let prevBtn = `<img src="./images/left-chevron.svg" alt="" class="btn-common btn-prev"/>`;
-        let nextBtn = `<img src="./images/right-chevron.svg" alt="" class="btn-common btn-next"/>`;
-
         let btnList = `
             <ul class="btn-wrap">
-                <li>${prevBtn}</li>
-                <li>${nextBtn}</li>
-            </ul>
-        `
+                <li>
+                    <img src="./images/left-chevron.svg" alt="" class="btn-common btn-prev"/>
+                </li>
+                <li>
+                    <img src="./images/right-chevron.svg" alt="" class="btn-common btn-next"/>
+                </li>
+            </ul>`
 
         return [btnList];
     }    
 
     bindEvents() {
         this.btnList.addEventListener('click', (evt) => {
-            if(evt.target.tagName === 'IMG') {
-                let targetClassName = evt.target.classList[1] 
-                this.detailEvent(targetClassName);
-            }
+            if(evt.target.tagName !== 'IMG') return;
+            let targetClassName = evt.target.classList[1] 
+            this.detailEvent(targetClassName);
         })
     }
 
